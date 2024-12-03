@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poiret+One&family=Protest+Revolution&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* --------------------------------------------------------------------------------------------------------- */
+/*------------------------------------------------****************---------------------------global styling */
+.g-body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    background-image: url('/images/web-design1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right-bottom;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+    
+}
+
+
+.g-header {
+    grid-area: header;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+
+    #s-nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+}
+
+
+.g-header #s-nav .name-initial {
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff9800;  
+    
+}
+
+.g-header #s-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+
+    .nav-link {
+        text-decoration: none;
+        color: #f2f2f2;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    
+        &:hover {
+            color: #ff9800;
+        }
+    
+    }
+    
+}
+
+.g-footer{
+    grid-area: footer;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------------------------------------------home page styling */
+#p-home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto 1fr;
+    grid-template-areas:
+    "header header" 
+    "main main" 
+    "footer footer" ;
+    
+}
+
+#p-home main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+
+#p-home main #s-welcome {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #ff9800;}
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+
+#p-home main #s-about {
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    color: #e0e0e0;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #ff9800;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+}
+
+/* -------------------------------------------------------------------------Resume page styling*/
+
+#p-resume {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+#p-resume main{
+    display: flex;
+    flex-direction: column;
+
+
+    h2 {
+        color: #ff9800;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+}
+
+#p-resume main #s-resume-contact {
+    text-align: center;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-color: 2px solid #ff9800;
+    border-radius: 10px;
+ 
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #ff9800;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6;}
+
+    a {
+        color: #ff9800;
+        text-decoration: none;}
+
+    a:hover {
+    text-decoration: underline;}
+}
+
+#p-resume main #s-job-experience .job, 
+#p-resume main #s-education .education, 
+#p-resume main #s-profile .profile{
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #ff9800;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+#p-resume main #s-job-experience .job strong, 
+#p-resume main #s-education .education strong {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+}
+
+#p-resume main #s-job-experience .job p,
+#p-resume main #s-education .education p {
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+#p-resume main ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#p-resume main ul li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* -------------------------------------------------------------------------------------web app sample styling*/
+#p-web-app-samples {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+#p-web-app-samples main #s-samples-intro {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: #ff9800;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #e0e0e0;
+    }
+}
+
+#p-web-app-samples main #s-samples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+#p-web-app-samples main #s-samples-grid .sample-card {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+
+
+    img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #ff9800;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        color: #ff9800;
+        margin-bottom: 5px;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 20px;
+        color: #e0e0e0;
+        text-align: left;
+
+        li {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+
+/* -----------------------------------------------------------------------other-sample page styling */
+#p-other-samples {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#p-other-samples main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+#p-other-samples main #s-other-samples-intro {
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+
+    h1 {
+        font-size: 2.5rem;
+        color: #ff9800;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        line-height: 1.6;
+    }
+}
+
+#p-other-samples main #s-other-samples-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+
+    .sample-card {
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+    
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #ff9800;
+        }
+    
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+    
+        h3 {
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 5px;
+        }
+    
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #e0e0e0;
+            text-align: left;
+    
+            li {
+                font-size: 1rem;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .g-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        border-bottom: #ff9800;
+
+        #s-nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #s-nav .name-initial {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        #s-nav .nav-links {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+    
+            li{
+                border-bottom: 2px solid #ff9800;
+            }
+        }
+    }
+
+    #p-home main #s-welcome,
+    #p-home main #s-about,
+    #p-web-app-samples main #s-samples-intro,
+    #p-other-samples main #s-other-samples-intro {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #p-web-app-samples main #s-samples-grid,
+    #p-other-samples main #s-other-samples-flex {
+        gap: 10px;
+    }
+
+    .sample-card {
+        max-width: 100%;
+    }
+}
+
+    img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Home Page */
+    #p-home {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "main main"
+            "footer footer";
+    }
+
+    #p-home main {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Resume Page */
+    #p-resume {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    #p-resume main {
+        display: flex;
+        flex-direction: column;
+    }
+
+/* Web App Samples */
+    #p-web-app-samples {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    #p-web-app-samples main #s-samples-intro,
+    #p-other-samples main #s-other-samples-intro {
+        text-align: center;
+        margin: 30px auto;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 10px;
+        width: 90%;
+        max-width: 900px;
+    }
+
+    #p-web-app-samples main #s-samples-grid,
+    #p-other-samples main #s-other-samples-flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        width: 90%;
+        margin: auto;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card,
+    #p-other-samples main #s-other-samples-flex .sample-card {
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        max-width: 300px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card img,
+    #p-other-samples main #s-other-samples-flex .sample-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card h2,
+    #p-other-samples main #s-other-samples-flex .sample-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #ff9800;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card p,
+    #p-other-samples main #s-other-samples-flex .sample-card p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card ul,
+    #p-other-samples main #s-other-samples-flex .sample-card ul {
+        list-style: disc;
+        padding-left: 20px;
+        color: #e0e0e0;
+        text-align: left;
+    }
+
+    #p-web-app-samples main #s-samples-grid .sample-card ul li,
+    #p-other-samples main #s-other-samples-flex .sample-card ul li {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
